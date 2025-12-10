@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InvesteFácil - Sua Jornada de Investimentos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, sans-serif;
+      }
+
+      :root {
+        --primary: #5d3dff;
+        --primary-dark: #4a2fcf;
+        --secondary: #00c4cc;
+        --light: #f8f9ff;
+        --dark: #1a1a2e;
+        --gray: #6c757d;
+        --light-gray: #e9ecef;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      header {
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary);
+      }
+
+      .logo span {
+        color: var(--secondary);
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--dark);
+        margin-left: 1.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover {
+        color: var(--primary);
+      }
+
+      .cta-button {
+        background: var(--primary);
+        color: white;
+        padding: 0.6rem 1.4rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .cta-button:hover {
+        background: var(--primary-dark);
+      }
+
+      .hero {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+        color: var(--dark);
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+        color: var(--gray);
+        margin-bottom: 2rem;
+        max-width: 600px;
+      }
+
+      .hero-image {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 6rem;
+      }
+
+      .features {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        color: var(--dark);
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+      }
+
+      .card-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1.2rem;
+      }
+
+      .card h3 {
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .card p {
+        color: var(--gray);
+        font-size: 0.95rem;
+      }
+
+      footer {
+        background: var(--dark);
+        color: white;
+        padding: 3rem 2rem;
+        margin-top: 4rem;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+      }
+
+      .footer-section a {
+        display: block;
+        color: #aaa;
+        text-decoration: none;
+        margin-bottom: 0.6rem;
+        font-size: 0.95rem;
+      }
+
+      .footer-section a:hover {
+        color: white;
+      }
+
+      .copyright {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #333;
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-content p {
+          margin: 0 auto 2rem;
+        }
+        nav a {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Investe<span>Fácil</span></div>
+      <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Educação</a>
+        <a href="#">Sobre</a>
+        <a href="#" class="cta-button">Abrir Conta</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Invista com inteligência e alcance seus objetivos financeiros</h1>
+        <p>
+          Plataforma intuitiva, taxas competitivas e acesso a milhares de
+          ativos. Comece hoje mesmo com segurança e suporte especializado.
+        </p>
+        <a href="#" class="cta-button">Começar Agora</a>
+      </div>
+      <div class="hero-image">📈</div>
+    </section>
+
+    <section class="features">
+      <h2 class="section-title">Por que escolher a gente?</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Segurança Total</h3>
+          <p>
+            Sua conta é protegida com criptografia de última geração e
+            monitoramento 24h.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Relatórios Inteligentes</h3>
+          <p>
+            Acompanhe seu patrimônio em tempo real com gráficos e análises
+            personalizadas.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎓</div>
+          <h3>Educação Financeira</h3>
+          <p>
+            Cursos, artigos e webinars para você tomar decisões mais informadas.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💡</div>
+          <h3>Assessoria Gratuita</h3>
+          <p>
+            Fale com especialistas sem custo adicional e descubra o melhor para
+            seu perfil.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Empresa</h4>
+          <a href="#">Quem Somos</a>
+          <a href="#">Carreiras</a>
+          <a href="#">Imprensa</a>
+          <a href="#">Sustentabilidade</a>
+        </div>
+        <div class="footer-section">
+          <h4>Produtos</h4>
+          <a href="#">Ações</a>
+          <a href="#">Fundos</a>
+          <a href="#">Tesouro Direto</a>
+          <a href="#">Previdência</a>
+        </div>
+        <div class="footer-section">
+          <h4>Recursos</h4>
+          <a href="#">Blog</a>
+          <a href="#">Calculadoras</a>
+          <a href="#">Simuladores</a>
+          <a href="#">Central de Ajuda</a>
+        </div>
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Suporte 24h</a>
+          <a href="#">Redes Sociais</a>
+          <a href="#">Fale Conosco</a>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 InvesteFácil. Todos os direitos reservados. Este site é um
+        projeto educacional.
+      </div>
+    </footer>
+  </body>
+</html>
